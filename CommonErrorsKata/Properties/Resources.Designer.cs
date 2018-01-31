@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CommonErrorsKata.Properties
+namespace CommonErrors.Properties
 {
 
 

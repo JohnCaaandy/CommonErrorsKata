@@ -1,12 +1,12 @@
-﻿using CommonErrorsKata.Shared;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CommonErrors.Shared;
 
-namespace CommonErrorsKata
+namespace CommonErrors
 {
     public partial class CommonErrorsForm : Form
     {
