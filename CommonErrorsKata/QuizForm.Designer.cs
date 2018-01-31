@@ -1,4 +1,4 @@
-﻿namespace CommonErrors
+﻿namespace CommonErrorsKata
 {
     partial class CommonErrorsForm
     {
