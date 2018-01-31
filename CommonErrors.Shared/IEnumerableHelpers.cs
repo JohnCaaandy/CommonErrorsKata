@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace CommonErrorsKata.Shared
+namespace CommonErrors.Shared
 {
-    public static class IEnumerableHelpers
+    public static class EnumerableHelpers
     {
         /// <summary>
         /// Gets a random element out of the collection
@@ -14,10 +14,11 @@ namespace CommonErrorsKata.Shared
         /// <returns></returns>
         public static T GetRandom<T>(this IEnumerable<T> collection)
         {
-            if (collection == null || collection.Count() == 0) return default(T);
+            var enumerable = collection as T[] ?? collection.ToArray();
+            if (!enumerable.Any()) return default(T);
             var rand = new Random(DateTime.Now.Millisecond);
-            var index = rand.Next(collection.Count());
-            return collection.ToArray()[index];
+            var index = rand.Next(enumerable.Count());
+            return enumerable.ToArray()[index];
         }
     }
 }
