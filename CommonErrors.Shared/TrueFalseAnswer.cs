@@ -1,6 +1,4 @@
-﻿using CommonErrorsKata.Shared;
-
-namespace CommonErrors.Shared
+﻿namespace CommonErrors.Shared
 {
     /// <summary>
     /// An Answer that only has two outcomes: true or false

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommonErrors.Shared;
 using NUnit.Framework;
-using CommonErrorsKata.Shared;
 
 namespace CommonErrors.Test
 {
