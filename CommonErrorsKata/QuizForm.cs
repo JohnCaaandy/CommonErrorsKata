@@ -23,7 +23,7 @@ namespace CommonErrorsKata
             _synchronizationContext = SynchronizationContext.Current;
             _files = Directory.GetFiles(Environment.CurrentDirectory + @"..\..\..\ErrorPics");
             _possibleAnswers = new[] { "Missing File", "null instance", "divide by zero" };
-            _possibleAnswers = _files.Select(f => Path.GetFileName(f)?.Replace(".png", "")).ToArray();
+            _possibleAnswers = _files.Select(f => Path.GetFileName(f)?.Replace(".png", " ")).ToArray();
             lstAnswers.DataSource = _possibleAnswers;
             _answerQueue = new AnswerQueue<TrueFalseAnswer>(15);
             Next();
