@@ -1,4 +1,6 @@
-﻿namespace CommonErrorsKata.Shared
+﻿using CommonErrorsKata.Shared;
+
+namespace CommonErrors.Shared
 {
     /// <summary>
     /// An Answer that only has two outcomes: true or false
@@ -18,8 +20,6 @@
         /// Whether or not the Answer was correct
         /// </summary>
         public bool Correct { get; set; }
-
-        
-        public decimal Grade { get { return Correct ?  100 : 0; } }
+        public decimal Grade => Correct ? 100 : 0;
     }
 }
