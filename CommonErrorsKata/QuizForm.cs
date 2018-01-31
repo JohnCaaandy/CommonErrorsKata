@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,7 +22,8 @@ namespace CommonErrorsKata
             InitializeComponent();
             _synchronizationContext = SynchronizationContext.Current;
             _files = Directory.GetFiles(Environment.CurrentDirectory +  @"..\..\..\ErrorPics");
-            _possibleAnswers = new string[] { "Missing File", "null instance", "divide by zero" };
+            _possibleAnswers = new [] { "Missing File", "null instance", "divide by zero" };
+            _possibleAnswers = _files.Select(f => f.Split(@"\".ToCharArray()).Last().Replace(".png", " ")).ToArray();
             lstAnswers.DataSource = _possibleAnswers;
             _answerQueue = new AnswerQueue<TrueFalseAnswer>(15);
             Next();
