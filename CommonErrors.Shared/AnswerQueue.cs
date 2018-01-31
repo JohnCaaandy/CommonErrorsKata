@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CommonErrorsKata.Shared
+namespace CommonErrors.Shared
 {
 
     public class AnswerQueue<T> : Queue<T> where T : IGradable
