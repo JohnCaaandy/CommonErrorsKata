@@ -1,4 +1,4 @@
-﻿namespace CommonErrorsKata.Shared
+﻿namespace CommonErrors.Shared
 {
     public interface IGradable
     {
